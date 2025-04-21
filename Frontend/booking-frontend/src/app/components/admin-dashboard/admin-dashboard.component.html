@@ -1,0 +1,24 @@
+<div class="max-w-4xl mx-auto p-4">
+    <h2 class="text-2xl font-bold mb-4">Admin Dashboard</h2>
+    <h3 class="text-xl mb-2">Create Service</h3>
+    <div class="mb-4">
+      <label class="block">Name</label>
+      <input type="text" [(ngModel)]="newService.name" class="w-full p-2 border">
+    </div>
+    <div class="mb-4">
+      <label class="block">Description</label>
+      <textarea [(ngModel)]="newService.description" class="w-full p-2 border"></textarea>
+    </div>
+    <div class="mb-4">
+      <label class="block">Price</label>
+      <input type="number" [(ngModel)]="newService.price" class="w-full p-2 border">
+    </div>
+    <button (click)="createService()" class="bg-green-500 text-white p-2 rounded mb-4">Create Service</button>
+    <h3 class="text-xl mb-2">All Bookings</h3>
+    <div *ngFor="let booking of bookings" class="border p-4 mb-4 rounded">
+      <h4 class="text-lg">{{ booking.service.name }}</h4>
+      <p>User: {{ booking.user }}</p>
+      <p>Date: {{ booking.booking_date | date:'medium' }}</p>
+      <p>Status: {{ booking.status }}</p>
+    </div>
+  </div>

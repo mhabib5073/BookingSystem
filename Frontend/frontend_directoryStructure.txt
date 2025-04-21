@@ -1,0 +1,22 @@
+6. Frontend Design (Angular 18)
+
+Project Structure
+
+src/
+├── app/
+│   ├── components/
+│   │   ├── login/
+│   │   ├── service-list/
+│   │   ├── booking-form/
+│   │   ├── user-dashboard/
+│   │   └── admin-dashboard/
+│   ├── services/
+│   │   ├── auth.service.ts
+│   │   ├── booking.service.ts
+│   │   └── service.service.ts
+│   ├── models/
+│   │   ├── booking.model.ts
+│   │   └── service.model.ts
+│   └── app.module.ts
+├── assets/
+└── styles.css
